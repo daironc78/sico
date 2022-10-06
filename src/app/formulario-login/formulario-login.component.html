@@ -1,0 +1,73 @@
+<div class="tamanioPantalla d-flex flex-column justify-content-center col-sm-12 col-md-4 offset-md-4">
+  <div class="bg-white border border-dark p-1 rounded-3 shadow show">
+    <form id="formularioLogin" class="d-flex flex-column justify-content-center">
+      <figure class="text-center">
+          <p class="h5">Para acceder a nuestros servicios de Información Empresarial, Ingresa:</p>
+      </figure>
+      <div class="form-floating mb-2">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Correo Electronico</label>
+      </div>
+      <div class="form-floating mb-2">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+        <label for="floatingPassword">Contraseña</label>
+      </div>
+      <div class="form-floating mb-3">
+        <figure class="text-end">
+          <a class="stretched-link text-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">¿Olvidaste la contraseña?</a>
+        </figure>
+      </div>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button type="button" class="btn btn-primary btn-lg">Ingresa</button>
+      </div>
+      <hr class="border border-dark border-2 opacity-50">
+      <br>
+      <figure class="text-center">
+        <p class="h6">
+          Si aún no eres nuestro cliente
+        </p>
+      </figure>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button type="button" class="btn btn-secondary btn-lg">Regístrate ahora</button>
+      </div>
+      <br>
+      <div class="form-floating mb-3">
+        <figure class="text-center">
+          <p class="h6">
+            Si tienes algún inconveniente con el acceso, por favor revisa los <a href="#" class="stretched-link text-info">requerimientos de tu navegador.</a>
+            <br><br>
+            Nota: Este registro únicamente es válido para los servicios de Información Empresarial en Línea.
+          </p>
+        </figure>
+      </div>
+    </form>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Restablecer Contraseña</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">
+              Recuerde que este proceso restablecerá su contraseña y le enviara la información a su correo electrónico. <br>
+              Por favor ingrese los siguientes datos y vía correo electrónico le será suministrada la información solicitada:
+            </p>
+            <form id="formularioLogin" class="d-flex flex-column justify-content-center">
+              <div class="form-floating mb-2">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Correo Electronico Usuario</label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-secondary">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

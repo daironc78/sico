@@ -1,0 +1,18 @@
+#formularioLogin {
+    margin: 10px 15px 10px 15px;
+}
+
+.tamanioPantalla {
+    height: 100vh;
+}
+
+@media screen and (max-width: 767px) {
+    #formularioLogin {
+        /* top | right | bottom | left */
+        margin: 10px 15px 10px 15px;
+    }
+
+    .tamanioPantalla {
+        height: auto;
+    }
+}

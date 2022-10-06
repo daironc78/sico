@@ -1,0 +1,258 @@
+<div class="tamanioPantalla d-flex flex-column justify-content-center col-sm-12 col-md-8 offset-md-2">
+  <div class="bg-white border border-dark p-1 rounded-3 shadow">
+    <form
+      id="formularioRegistro"
+      class="d-flex flex-column justify-content-center g-3 needs-validation"
+      novalidate
+    >
+      <figure class="text-center">
+        <p class="h5">Registro de usuarios:</p>
+        <p class="lead">
+          Lo invitamos a registrarse y podrá acceder a una demostración de
+          nuestros servicios de información.
+        </p>
+      </figure>
+  
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-floating inputForm">
+            <input
+              type="text"
+              class="form-control"
+              id="Name"
+              placeholder="carlos feria"
+              [value]="name"
+              (input)="setName($event)"
+            />
+            <label for="Name">Nombre*</label>
+          </div> 
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating inputForm">
+            <input
+              type="email"
+              class="form-control"
+              id="Email"
+              placeholder="name@example.com"
+              [value]="email"
+              (input)="setEmail($event)"
+            />
+            <label for="Email">Correo Electronico*</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-floating inputForm">
+            <select
+              class="form-select"
+              id="TipoIdentificacion"
+              aria-label="Floating label select example"
+            >
+              <option selected>Seleccione</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <label for="TipoIdentificacion">Tipo Identificación*</label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating inputForm">
+            <input
+              type="text"
+              class="form-control"
+              id="Identificacion"
+              placeholder="1234567890"
+              [value]="identificacion"
+              (input)="setIdentificacion($event)"
+            />
+            <label for="Identificacion">Identificación*</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-floating inputForm">
+            <input
+              type="text"
+              class="form-control"
+              id="Empresa"
+              placeholder="CCB"
+              [value]="empresa"
+              (input)="setEmpresa($event)"
+            />
+            <label for="Empresa">Empresa*</label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating inputForm">
+            <input
+              type="text"
+              class="form-control"
+              id="Cargo"
+              placeholder="empleado"
+              [value]="cargo"
+              (input)="setCargo($event)"
+            />
+            <label for="Cargo">Cargo*</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-floating inputForm">
+            <input
+              type="text"
+              class="form-control"
+              id="Celular"
+              placeholder="3216554987"
+              [value]="celular"
+              (input)="setCelular($event)"
+            />
+            <label for="Celular">Celular*</label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating inputForm">
+            <input
+              type="text"
+              class="form-control"
+              id="CodigoPromocional"
+              placeholder="Bogotá"
+              [value]="codigoPromocional"
+              (input)="setCodigoPromocional($event)"
+            />
+            <label for="CodigoPromocional">Código Promocional</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-floating inputForm">
+            <input
+              type="text"
+              class="form-control"
+              id="Direccion"
+              placeholder="KR 88"
+              [value]="direccion"
+              (input)="setDireccion($event)"
+            />
+            <label for="Direccion">Dirección*</label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating inputForm">
+            <select class="form-select" id="Pais" aria-label="Selecione País">
+              <option selected>Seleccione</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <label for="Pais">País*</label>
+          </div>
+        </div>
+      </div> 
+      <div class="row" style="display: none">
+        <div class="col-md-6">
+          <div class="form-floating inputForm">
+            <div class="form-floating col-md-6 inputForm">
+              <select
+                class="form-select"
+                id="Departamento"
+                aria-label="Selecione Departamento"
+              >
+                <option selected>Seleccione</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <label for="Departamento">Departamento*</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <select
+            class="form-select"
+            id="Ciudad"
+            aria-label="Selecione Municipio/Estado"
+          >
+            <option selected>Seleccione</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          <label for="Ciudad">Municipio/Estado*</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="form-check form-switch d-flex justify-content-center inputForm">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="Estudiante"
+              [checked]="esEstudiante"
+              (input)="setEsEstudiante($event)"
+            />
+            <label class="form-check-label" for="Estudiante">¿Es usted un estudiante?</label>
+          </div>
+        </div>
+        
+      </div>
+      <br />
+      <figure>
+        <p class="lead">
+          En cumplimiento con la ley 1581 de 2012 los datos suministrados se
+          utilizarán para brindarle la información de nuestros servicios.
+        </p>
+        <div
+          class="form-check form-switch d-flex justify-content-center inputForm"
+        >
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="Terminos"
+            [checked]="acetoTerminos"
+            (input)="setAcetoTerminos($event)"
+          />
+          <label class="form-check-label" for="Terminos">
+            He leído y acepto los
+            <a href="#" class="text-info">Términos y condiciones.</a>
+          </label>
+        </div>
+      </figure>
+      <div class="row justify-content-center">
+        <div class="col-md-2 col-sm-12">
+          <button
+            type="button"
+            class="btn btn-primary btn-margen inputForm"
+          >
+            Regresar
+          </button>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <button
+            type="button"
+            class="btn btn-secondary btn-margen inputForm"
+            (click)="registrarUsuario()"
+          >
+            Registrar
+          </button>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <button
+            type="button"
+            class="btn btn-primary btn-margen inputForm"
+            (click)="limpiarFormulario()"
+          >
+            Limpiar Formulario
+          </button>
+        </div>
+        
+      </div>
+    </form>
+  </div>  
+</div>
